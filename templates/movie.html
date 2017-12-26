@@ -1,0 +1,16 @@
+$def with (movie, casts)
+<h4><a href='/'>返回首页</a></h4>
+<h1> $movie.title</h1>
+<<img src="$movie.image`" alt="">
+<hr>
+<p>年代: $movie.year</p>
+<p>国家: $movie.countries</p>
+<p>原名: $movie.origin</p>
+<p>评分: $movie.rating</p>
+<p>导演: $movie.directors</p>
+<p>演员:
+    $for cast in casts:
+    <a href="/cast/$cast">$cast</a>
+</p>
+<p>简介: $movie.summary</p>
+<p>$movie.genres</p>

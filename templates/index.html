@@ -1,0 +1,17 @@
+$def with (movies)
+
+<h1>Yabo's Movie Site</h1>
+
+<form action='/' method='post'>
+    <input type='text' name='title'/>
+    <input type='submit' value='search'/>
+</form>
+
+
+
+$for movie in movies:
+	<li>
+	      <a href='movie/$movie['id']'>
+              $movie['title']
+          </a>
+	</li>
